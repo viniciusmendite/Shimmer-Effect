@@ -13,3 +13,6 @@ Link da URL de requisição: [Filmes JSON](https://filmespy.herokuapp.com/api/v1
 <kbd>
 <img src="https://github.com/viniciusmendite/PrintScreen/blob/master/shimmer-effect/shimmerEffect.gif" width="250" height="452" /> 
 </kbd>
+<kbd>
+<img src="https://github.com/viniciusmendite/PrintScreen/blob/master/shimmer-effect/refreshing.gif" width="250" height="452" /> 
+</kbd>
