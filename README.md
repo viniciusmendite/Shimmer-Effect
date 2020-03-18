@@ -1,5 +1,5 @@
 ## Sobre o APP
-Aplicativo criado para praticar conhecimento em Shimmer Effect. Foi utilizado requisição fetch() para renderizar os itens na tela.
+Aplicativo criado para praticar conhecimento em Shimmer Effect. Foi utilizado requisição ***fetch()*** para renderizar os itens na tela.
 Foi desenvolvido utilizando a linguagem React Native.
 
 Link da URL de requisição: [Filmes JSON](https://filmespy.herokuapp.com/api/v1/filmes) 
