@@ -19,6 +19,7 @@ export default () => {
 
     const [movies, setMovies] = useState([]);
     const [visible, setVisible] = useState(false);
+    const [refreshing, setRefreshing] = useState(false);
 
     fetch('https://filmespy.herokuapp.com/api/v1/filmes')
         .then((response) => response.json())
@@ -72,6 +73,18 @@ export default () => {
             </MovieArea>
         );
     }
+
+    const handleRefresh = () => {
+        setRefreshing(true);
+        setMovies([]);
+        fetch('https://filmespy.herokuapp.com/api/v1/filmes')
+            .then((response) => response.json())
+            .then((response) => {
+                setMovies(response.filmes);
+            });
+        setRefreshing(false);
+    }
+
     return (
         <Container>
             <StatusBar backgroundColor="#72594e" barStyle="dark-content" />
@@ -80,6 +93,8 @@ export default () => {
                 data={movies}
                 renderItem={({ item }) => <MovieList data={item} />}
                 keyExtractor={(item, index) => item.titulo}
+                refreshing={refreshing}
+                onRefresh={handleRefresh}
             />
         </Container>
     );
